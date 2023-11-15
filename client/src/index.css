@@ -1,0 +1,183 @@
+/* Style the entire page content */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Add a background color to the page if needed */
+}
+
+/* Style the form container */
+form {
+  max-width: 400px; /* Increase the max-width for a wider form */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+  background-color: #f9f9f9;
+  text-align: center; /* Center text within the form */
+}
+
+/* Style labels */
+label {
+  display: block;
+  margin-bottom: 10px; /* Increase the margin to provide more spacing */
+}
+
+/* Style input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0; /* Increase the margin to provide more spacing */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 19px; /* Keep the font size as it is */
+}
+
+/* Style submit buttons */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px; /* Keep the button height the same */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px; /* Keep the font size as it is */
+}
+/* Styling for the Login Form */
+/* form1 {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+} */
+
+h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/*todolist*/
+
+.index{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+
+}
+.form1{
+  align-items: center;
+}
+
+.form1 input{
+  width: 300px;
+  padding:10px;
+  border-bottom:2px solid;
+  outline:none;
+
+}
+.form1 button{
+  padding:10px;
+  background-color: black;
+  color:white;
+  cursor:pointer;
+  width: 50px;
+}
+.task{
+  display: flex;
+  align-items:center;
+  width:365px;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  height: 35px;
+  padding: 2px 5px 2px 5px;
+  margin-top: 2px;
+}
+.check{
+  display: flex;
+  align-items: center;
+}
+.check .icon{
+  margin-right:5px;
+  font-size: 15px;
+
+}
+.task div span{
+  margin: 0px 5px 0px 4px;
+}
+.task div .icon{
+  cursor:pointer;
+}
+.line{
+  text-decoration: line-through;
+}
+.login-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: 1px solid #4CAF50;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
