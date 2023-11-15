@@ -8,7 +8,7 @@ const todoModel=require('./model/todolist')
 const app=express()
 app.use(cors({
     
-    origin: 'https://todo-list2-six.vercel.app/',
+    origin: 'https://todo-list2-six.vercel.app',
     methods: ["GET", "POST","PUT" ,"DELETE"],
     credentials: true,
 
