@@ -19,12 +19,12 @@ const Index = () => {
 
 
     }
-    const handleDelete=(id)=>{
-        axios.delete('https://todo-list2-server.vercel.app/delete/'+id,{ withCredentials: true })
-        .then(result=>{location.reload()})  
-        .catch(err=>console.log(err))
-        
-
+   const handleDelete = (id) => {
+    axios.delete('https://todo-list2-server.vercel.app/delete/' + id, { withCredentials: true })
+        .then(result => {
+            settodos(prevTodos => prevTodos.filter(todo => todo._id !== id));
+        })
+        .catch(err => console.log(err));
     }
     const handleLogout=()=>{
         axios.post('https://todo-list2-server.vercel.app/logout',{ withCredentials: true })
