@@ -11,36 +11,13 @@ app.use(cors({
     origin: 'https://todo-list2-oaf5.vercel.app',
     methods: ["GET", "POST","PUT" ,"DELETE"],
     credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'],
-
-   
-
 }))
 
 app.use(express.json())
 app.use(cookieParser())
 
 
-
 mongoose.connect('mongodb+srv://nehapanwal02:5oTCwJdv0fRciEfy@cluster0.veoz76r.mongodb.net/userdata')
-const authenticate=async(req,res,next)=>{
-    const token=req.cookies.jwt;
-    if(!token){
-        return res.status(401).json({error:"Token missing"})
-
-    }
-    try{
-        const userdata=await jwt.verify(token,"thisisamernstackprojectabcdefghijklmnopqrstuvwxyz")
-        //console.log(userdata)
-        req.userdata=userdata;
-        next();
-
-    }
-    catch(err){
-        return res.status(401).json({error:"Invalid Token"})
-    }
-}
-
 app.post('/register',async(req,res)=>{
     const {user,email,password}=req.body
     const user1=await usermodel.findOne({email:email})
