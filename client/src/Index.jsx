@@ -7,12 +7,12 @@ const Index = () => {
     axios.defaults.withCredentials = true;
     useEffect(()=>{
 
-        axios.get('https://todo-list2-owuun3sl7-nehakumari02s-projects.vercel.app/Get',{ withCredentials: true })
+        axios.get('https://todo-list2-server.vercel.app/Get',{ withCredentials: true })
         .then(result=>settodos(result.data))
         .catch(err=>console.log(err))
     },[])
     const handleEdit=(id)=>{
-        axios.put('https://todo-list2-owuun3sl7-nehakumari02s-projects.vercel.app/update/'+id,{ withCredentials: true })
+        axios.put('https://todo-list2-server.vercel.app/update/'+id,{ withCredentials: true })
         .then(result=>{window.location.reload()})  
         .catch(err=>console.log(err))
         
@@ -20,14 +20,14 @@ const Index = () => {
 
     }
     const handleDelete=(id)=>{
-        axios.delete('https://todo-list2-owuun3sl7-nehakumari02s-projects.vercel.app/delete/'+id,{ withCredentials: true })
+        axios.delete('https://todo-list2-server.vercel.app/delete/'+id,{ withCredentials: true })
         .then(result=>{location.reload()})  
         .catch(err=>console.log(err))
 
 
     }
     const handleLogout=()=>{
-        axios.post('https://todo-list2-owuun3sl7-nehakumari02s-projects.vercel.app/logout',{ withCredentials: true })
+        axios.post('https://todo-list2-server.vercel.app/logout',{ withCredentials: true })
         .then(res=>{ window.location.href = '/login';})
         .catch(err=>console.log("Logout Failed"))
     }
