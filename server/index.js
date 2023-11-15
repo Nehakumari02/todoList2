@@ -70,6 +70,7 @@ app.post('/login',async(req,res)=>{
                 res.cookie("jwt",token,{
                     expires: new Date(Date.now() + 5000000),
                     httpOnly: true,
+                    path: "/",
                     sameSite: "none",
                     secure: true,
                 })
