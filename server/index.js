@@ -73,6 +73,7 @@ app.post('/login',async(req,res)=>{
                     path: "/",
                     sameSite: "none",
                     secure: true,
+                    domain: ".vercel.app"
                 })
                 //console.log(req.cookies.jwt)
                 res.json("Sucess")  
